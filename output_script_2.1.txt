@@ -1,0 +1,131 @@
+KERNEL INFORMATION: Linux algorithm-Inspiron-5555 5.8.0-48-generic #54~20.04.1-Ubuntu SMP Sat Mar 20 13:40:25 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+------------------------------------------------------------------------------------------------------------------------------------------------------
+NETWORK INFORMATION: 
+COMMAND ip addr: 
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp1s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether f8:ca:b8:45:49:29 brd ff:ff:ff:ff:ff:ff
+3: wlp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 94:53:30:91:22:5d brd ff:ff:ff:ff:ff:ff
+    inet 10.10.10.106/24 brd 10.10.10.255 scope global dynamic noprefixroute wlp2s0
+       valid_lft 5695sec preferred_lft 5695sec
+    inet6 fe80::1fbc:b703:e068:97a5/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+
+COMMAND ifconfig: 
+enp1s0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether f8:ca:b8:45:49:29  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 20993  bytes 2017770 (2.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 20993  bytes 2017770 (2.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.10.10.106  netmask 255.255.255.0  broadcast 10.10.10.255
+        inet6 fe80::1fbc:b703:e068:97a5  prefixlen 64  scopeid 0x20<link>
+        ether 94:53:30:91:22:5d  txqueuelen 1000  (Ethernet)
+        RX packets 366018  bytes 222899524 (222.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 125718  bytes 20599397 (20.5 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+FIREWALL CONFIGURATION: 
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     LIMIT IN    Anywhere                  
+22                         ALLOW IN    Anywhere                  
+80/tcp                     DENY IN     Anywhere                  
+192.168.1.5 3318/tcp       ALLOW IN    0.0.0.0/24                
+22/tcp (v6)                LIMIT IN    Anywhere (v6)             
+22 (v6)                    ALLOW IN    Anywhere (v6)             
+80/tcp (v6)                DENY IN     Anywhere (v6)             
+
+80/tcp                     ALLOW OUT   Anywhere                  
+80/tcp (v6)                ALLOW OUT   Anywhere (v6)             
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+HARDWARE INFORMATION:
+H/W path         Device      Class          Description
+=======================================================
+                             system         Inspiron 5555 (Inspiron 5555)
+/0                           bus            0CHHXW
+/0/0                         memory         64KiB BIOS
+/0/12                        memory         320KiB L1 cache
+/0/13                        memory         2MiB L2 cache
+/0/25                        memory         4GiB System Memory
+/0/25/0                      memory         2GiB SODIMM DDR3 Synchronous Unbuffered (Unregistered) 1600 MHz (0,6 ns)
+/0/25/1                      memory         2GiB SODIMM DDR3 Synchronous Unbuffered (Unregistered) 1600 MHz (0,6 ns)
+/0/2c                        processor      AMD A10-8700P Radeon R6, 10 Compute Cores 4C+6G
+/0/100                       bridge         Family 15h (Models 60h-6fh) Processor Root Complex
+/0/100/0.2                   generic        Family 15h (Models 60h-6fh) I/O Memory Management Unit
+/0/100/1                     display        Wani [Radeon R5/R6/R7 Graphics]
+/0/100/1.1                   multimedia     Kabini HDMI/DP Audio
+/0/100/2.2                   bridge         Family 15h (Models 60h-6fh) Processor Root Port
+/0/100/2.2/0     enp1s0      network        RTL810xE PCI Express Fast Ethernet controller
+/0/100/2.3                   bridge         Family 15h (Models 60h-6fh) Processor Root Port
+/0/100/2.3/0     wlp2s0      network        QCA9377 802.11ac Wireless Network Adapter
+/0/100/3.1                   bridge         Family 15h (Models 60h-6fh) Processor Root Port
+/0/100/8                     generic        Carrizo Platform Security Processor
+/0/100/9.2                   multimedia     Family 15h (Models 60h-6fh) Audio Controller
+/0/100/10                    bus            FCH USB XHCI Controller
+/0/100/10/0      usb2        bus            xHCI Host Controller
+/0/100/10/0/1                communication  Bluetooth wireless interface
+/0/100/10/0/4                multimedia     Integrated_Webcam_HD
+/0/100/10/1      usb3        bus            xHCI Host Controller
+/0/100/11                    storage        FCH SATA Controller [AHCI mode]
+/0/100/12                    bus            FCH USB EHCI Controller
+/0/100/12/1      usb1        bus            EHCI Host Controller
+/0/100/12/1/1                bus            Root Hub
+/0/100/12/1/1/1              generic        USB2.0-CRW
+/0/100/14                    bus            FCH SMBus Controller
+/0/100/14.3                  bridge         FCH LPC Bridge
+/0/101                       bridge         Family 15h (Models 60h-6fh) Host Bridge
+/0/102                       bridge         Family 15h (Models 60h-6fh) Host Bridge
+/0/103                       bridge         Carrizo Audio Dummy Host Bridge
+/0/104                       bridge         Family 15h (Models 60h-6fh) Processor Function 0
+/0/105                       bridge         Family 15h (Models 60h-6fh) Processor Function 1
+/0/106                       bridge         Family 15h (Models 60h-6fh) Processor Function 2
+/0/107                       bridge         Family 15h (Models 60h-6fh) Processor Function 3
+/0/108                       bridge         Family 15h (Models 60h-6fh) Processor Function 4
+/0/109                       bridge         Family 15h (Models 60h-6fh) Processor Function 5
+/0/1                         system         PnP device PNP0c01
+/0/2                         system         PnP device PNP0c02
+/0/3                         system         PnP device PNP0c02
+/0/4                         system         PnP device PNP0b00
+/0/5                         generic        PnP device DLL06bd
+/0/6                         input          PnP device PNP0303
+/0/7                         system         PnP device PNP0c02
+/0/8             scsi0       storage        
+/0/8/0.0.0       /dev/sda    disk           240GB KINGSTON SA400S3
+/0/8/0.0.0/1     /dev/sda1   volume         511MiB Windows FAT volume
+/0/8/0.0.0/2     /dev/sda2   volume         223GiB EXT4 volume
+/0/9             scsi1       storage        
+/0/9/0.0.0       /dev/cdrom  disk           DVD+-RW SU-208GB
+/1                           power          DELL VN3N047
+-----------------------------------------------------------------------------------------------------------------------------------------------
+OUTPUT OF FILES: (Hint: if there is no output from the file, then all the lines in the file are commented out or the file is empty)
+Output /etc/resolv.conf:
+nameserver 127.0.0.53
+options edns0 trust-ad
+
+Output /etc/sysctl.conf:
